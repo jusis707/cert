@@ -6,7 +6,7 @@
 </br>rediģējam:
 </br>nano cert.sh
 </br>norādam divas e-pasta adreses un mainam mapi LOG_DIR="/XXX/XXX/cert" uz Jūsu mapi.
-</br>Iespējama Cachet 'ziņojmu dēļa' nosūtīšana caur API, aizkomentēts.
+</br>Iespējama, ziņojuma, nosūtīšana uz Cachet 'ziņojmu dēļa', izaucot API, aizkomentēts, jānomaina <---CACHET-TOKENS--->.
 </br>2. Ar ziņojumu nosūtīšanu uz 'Slack': 
 </br>git clone https://github.com/jusis707/cert
 </br>cd slack
