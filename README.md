@@ -13,7 +13,7 @@
 </br>cd slack
 </br>rediģējam:
 </br>nano cert.sh
-</br>norādam Slack kanālu u Slack tokenu.
+</br>norādam Slack kanālu un Slack tokenu.
 </br>Mainam, atrašanās vietu HOME_SCRIPT="/XXX/XXX" uz Jūsu mapi.
 </br>Jebkura iespēja, jāparedz ar cron turpmāko darbību:
 </br>crontab -e
