@@ -49,7 +49,7 @@ else
             echo -e "CERT.LV ALERT!" | mail -s "[ALERT] CERT.LV ALERT" "$EMAIL_SECONDARY"
             # curl -X POST 'https://XXX.XXX.XXX/api/v1/incidents' \
             # -H 'Content-Type: application/json' \
-            # -H 'X-Cachet-Token: <---CACHET-MONITORINGA-TOKENS--->' \
+            # -H 'X-Cachet-Token: <---CACHET-TOKENS--->' \
             # -d "{\"name\":\"CERT.LV ISSUED AN ALERT!\",\"message\":\"${EMAIL_BODY_JSON}\",\"status\":2,\"visible\":1,\"component_id\":1,\"component_status\":2,\"notify\":\"false\",\"template\":\"GeneralIncidentTemplate\",\"vars\": {\"foo\":\"uno\", \"bar\":\"dos\", \"xyzzy\":\"tres\"}}"
             if [ $? -eq 0 ]; then
                 echo "Email sent successfully to $RECIPIENT_EMAIL." >> "$VAR_LOG_CERT"
