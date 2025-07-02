@@ -1,5 +1,5 @@
 # CERT.LV brīdinājumu apziņošana
-# avots (https://cert.lv/lv/incidenti/bridinajumi)
+# avots https://cert.lv/lv/rss/incidenti/bridinajumi.xm
 </br>Uzstādīšana, divi varianti:
 </br>1. Ar e-pasta izsūtīšanu:
 </br>git clone https://github.com/jusis707/cert
