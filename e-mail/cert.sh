@@ -5,7 +5,7 @@ EMAIL_SECONDARY="<---E-PASTS---OTRAIS---(XXX@sms.lmt.lv)--->"
 SENDER_NAME="CERT.LV Notifier"
 EMAIL_SUBJECT="CERT.LV Brīdinājumi"
 
-LOG_DIR="/XXX/XXX/cert"
+LOG_DIR="/XXX/XXX"
 TEKSTS="$LOG_DIR/diff.log"
 DATNE="$LOG_DIR/cert-$(date +%d-%m-%Y).log"
 OLD="$LOG_DIR/vecs.baze"
