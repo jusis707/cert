@@ -1,6 +1,6 @@
 # CERT.LV brīdinājumu apziņošana
 # avots https://cert.lv/lv/rss/incidenti/bridinajumi.xml
-</br>Uzstādīšana, divi varianti:
+Uzstādīšana, divi varianti:
 </br>1. Ar e-pasta izsūtīšanu:
 </br>`git clone https://github.com/jusis707/cert`
 </br>`cd e-mail`
