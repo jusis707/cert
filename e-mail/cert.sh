@@ -38,6 +38,7 @@ else
         diff <(sort "$NEW") <(sort "$OLD") > "$IZMAINAS_LOG"
         comm -23 <(sort -u "$NEW") <(sort -u "$OLD") > "$TEKSTS"
         cat "$TEKSTS" | grep title | sed -e 's/<title>/\n/' -e 's/<\/title>//' > "$TRANSFORM_LOG"
+        echo "" >> "$TRANSFORM_LOG"
         cat "$TEKSTS" | grep -v title >> "$TRANSFORM_LOG"
         cat "$TRANSFORM_LOG" > "$TEKSTS"
 
