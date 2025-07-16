@@ -14,10 +14,10 @@ UZ_EMAIL_LOG="$LOG_DIR/uz-email.log"
 TRANSFORM_LOG="$LOG_DIR/transform.log"
 VAR_LOG_CERT="/var/log/cert.log"
 
-CACHET_API_URL="https://sesks.lu.lv/api/v1/incidents"
-CACHET_API_TOKEN="<---CACHET--TOKENS--->"
-PUSHBULLET_API_URL="https://api.pushbullet.com/v2/pushes"
-PUSHBULLET_ACCESS_TOKEN="<---PUSHBULLET--TOKENS--->"
+#CACHET_API_URL="https://sesks.lu.lv/api/v1/incidents"
+#CACHET_API_TOKEN="<---CACHET--TOKENS--->"
+#PUSHBULLET_API_URL="https://api.pushbullet.com/v2/pushes"
+#PUSHBULLET_ACCESS_TOKEN="<---PUSHBULLET--TOKENS--->"
 CERT_LV_RSS_FEED="https://cert.lv/lv/rss/incidenti/bridinajumi.xml"
 CERT_LV_INFO_URL="https://cert.lv/lv/incidenti/bridinajumi"
 
@@ -52,12 +52,12 @@ else
             echo -e "$EMAIL_BODY" | mail -s "$EMAIL_SUBJECT" -r "$SENDER_NAME <$RECIPIENT_EMAIL>" "$RECIPIENT_EMAIL"
             echo -e "CERT.LV ALERT!" | mail -s "[ALERT] CERT.LV ALERT" "$EMAIL_SECONDARY"
             
-            curl -X POST "$CACHET_API_URL" \
+#            curl -X POST "$CACHET_API_URL" \
             -H 'Content-Type: application/json' \
             -H "X-Cachet-Token: $CACHET_API_TOKEN" \
             -d "{\"name\":\"CERT.LV ISSUED AN ALERT!\",\"message\":\"${EMAIL_BODY_JSON}\",\"status\":2,\"visible\":1,\"component_id\":1,\"component_status\":2,\"notify\":\"false\",\"template\":\"GeneralIncidentTemplate\",\"vars\": {\"foo\":\"uno\", \"bar\":\"dos\", \"xyzzy\":\"tres\"}}"
 
-            curl -X POST "$PUSHBULLET_API_URL" \
+ #           curl -X POST "$PUSHBULLET_API_URL" \
             -H "Access-Token: $PUSHBULLET_ACCESS_TOKEN" \
             -H 'Content-Type: application/json' \
             -d '{"type": "note", "title": "CERT ALERT", "body": "CERT ALERT"}' -k &>/dev/null
